@@ -24,6 +24,8 @@ nav {
   align-items: center;
   justify-content: center;
   height: 4rem;
+  position: fixed;
+  width: 100%;
 }
 
 .nav-container {
