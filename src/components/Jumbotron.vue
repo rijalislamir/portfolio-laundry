@@ -14,7 +14,7 @@ div {
 
 h1 {
   display: inline;
-  background: linear-gradient(120deg, #00DBDE, #FC00FF);
+  background: linear-gradient(120deg, #00dbde, #fc00ff);
   background-clip: text;
   font-size: 72px;
   -webkit-background-clip: text;
