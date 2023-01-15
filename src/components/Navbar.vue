@@ -19,7 +19,7 @@
 
 <style scoped>
 nav {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,5 +48,5 @@ ul {
 </style>
 
 <script setup lang="ts">
-import Button from './Button.vue';
+import Button from "./Button.vue";
 </script>
