@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import facebookIcon from '../assets/img/icons/facebook-white.svg'
-import twitterIcon from '../assets/img/icons/twitter-white.svg'
-import instagramIcon from '../assets/img/icons/instagram-white.svg'
-import whatsappIcon from '../assets/img/icons/whatsapp-white.svg'
-import linkedinIcon from '../assets/img/icons/linkedin-white.svg'
+import facebookIcon from "../assets/img/icons/facebook-white.svg";
+import twitterIcon from "../assets/img/icons/twitter-white.svg";
+import instagramIcon from "../assets/img/icons/instagram-white.svg";
+import whatsappIcon from "../assets/img/icons/whatsapp-white.svg";
+import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 </script>
 
 <template>
@@ -15,9 +15,7 @@ import linkedinIcon from '../assets/img/icons/linkedin-white.svg'
 
       <div class="footer-menu">
         <div class="footer-menu-item">
-          <h4>
-            About Us
-          </h4>
+          <h4>About Us</h4>
 
           <ul>
             <li>Shops</li>
@@ -25,23 +23,19 @@ import linkedinIcon from '../assets/img/icons/linkedin-white.svg'
             <li>Promo</li>
           </ul>
         </div>
-        
+
         <div class="footer-menu-item">
-          <h4>
-            Pricing
-          </h4>
+          <h4>Pricing</h4>
 
           <ul>
             <li>Regular</li>
             <li>Premium</li>
           </ul>
         </div>
-        
+
         <div class="footer-menu-item">
-          <h4>
-            Contact Us
-          </h4>
-          
+          <h4>Contact Us</h4>
+
           <ul>
             <li>Location</li>
             <li>Customer Support</li>
@@ -78,7 +72,7 @@ footer {
 
 hr {
   /* background-color: red; */
-  border-color: rgba(255, 255, 255, .2);
+  border-color: rgba(255, 255, 255, 0.2);
   height: 0;
   margin: 2rem 0;
   width: 100%;
@@ -98,7 +92,7 @@ hr {
 .footer-menu ul {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
   list-style-type: none;
 }
 
