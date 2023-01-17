@@ -1,21 +1,21 @@
 <template>
   <header>
-      <nav :class="(showNavbar && 'show')">
-        <div class="nav-container">
-          <h1>Logo</h1>
-          
-          <div class="right-nav">
-            <ul>
-              <li>Pricing</li>
-              <li>Features</li>
-            </ul>
-            
-            <span>|</span>
-            
-            <Button>CONTACT US</Button>
-          </div>
+    <nav :class="showNavbar && 'show'">
+      <div class="nav-container">
+        <h1>Logo</h1>
+
+        <div class="right-nav">
+          <ul>
+            <li>Pricing</li>
+            <li>Features</li>
+          </ul>
+
+          <span>|</span>
+
+          <Button>CONTACT US</Button>
         </div>
-      </nav>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -69,18 +69,18 @@ const lastScrollPosition = ref(window.pageYOffset);
 
 onMounted(() => {
   lastScrollPosition.value = window.pageYOffset;
-  window.addEventListener('scroll', onScroll)
-})
+  window.addEventListener("scroll", onScroll);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', onScroll)
-})
+  window.removeEventListener("scroll", onScroll);
+});
 
 const onScroll = () => {
   if (window.pageYOffset < 0) return;
   if (Math.abs(window.pageYOffset - lastScrollPosition.value) < 5) return;
-  
+
   showNavbar.value = window.pageYOffset <= lastScrollPosition.value;
   lastScrollPosition.value = window.pageYOffset;
-}
+};
 </script>
