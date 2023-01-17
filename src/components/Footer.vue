@@ -15,30 +15,30 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 
       <div class="footer-menu">
         <div class="footer-menu-item">
-          <h4>About Us</h4>
+          <h3>About Us</h3>
 
           <ul>
-            <li>Shops</li>
-            <li>Services</li>
-            <li>Promo</li>
+            <li><a href="#">Shops</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Promo</a></li>
           </ul>
         </div>
 
         <div class="footer-menu-item">
-          <h4>Pricing</h4>
+          <h3>Pricing</h3>
 
           <ul>
-            <li>Regular</li>
-            <li>Premium</li>
+            <li><a href="#">Regular</a></li>
+            <li><a href="#">Premium</a></li>
           </ul>
         </div>
 
         <div class="footer-menu-item">
-          <h4>Contact Us</h4>
+          <h3>Contact Us</h3>
 
           <ul>
-            <li>Location</li>
-            <li>Customer Support</li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Customer Support</a></li>
           </ul>
         </div>
       </div>
@@ -46,13 +46,13 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
       <hr />
 
       <div class="footer-copyright">
-        <div class="copyright-text">© 2023 Rijal Islami</div>
+        <div class="copyright-text">© 2023 <a href="#">Rijal Islami</a></div>
         <div class="social-media">
-          <img :src="facebookIcon" />
-          <img :src="twitterIcon" />
-          <img :src="instagramIcon" />
-          <img :src="whatsappIcon" />
-          <img :src="linkedinIcon" />
+          <a href="#"><img :src="facebookIcon" /></a>
+          <a href="#"><img :src="twitterIcon" /></a>
+          <a href="#"><img :src="instagramIcon" /></a>
+          <a href="#"><img :src="whatsappIcon" /></a>
+          <a href="#"><img :src="linkedinIcon" /></a>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 400px;
   padding: 36px;
 }
 
