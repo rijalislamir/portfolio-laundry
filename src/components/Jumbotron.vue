@@ -3,14 +3,16 @@
     <div class="wrapper">
       <div>
         <h1>Find Your Best Laundry</h1>
-        <p class="sub-text">Experience your best feeling of smoothness from laundry.</p>
+        <p class="sub-text">
+          Experience your best feeling of smoothness from laundry.
+        </p>
 
         <div class="download-app">
           <button class="download-btn">
             <span class="google-play-icon"></span>
             <span>Download the App</span>
           </button>
-          
+
           <button class="download-btn">
             <span class="apple-icon"></span>
             <span>Download the App</span>
@@ -73,19 +75,19 @@ h1 {
   color: white;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   font-weight: 100;
   padding: 1rem 1.5rem;
 }
 
 .google-play-icon {
-  content: url('../assets/img/icons/google-play-white.png');
+  content: url("../assets/img/icons/google-play-white.png");
   display: inline-block;
   width: 24px;
 }
 
 .apple-icon {
-  content: url('../assets/img/icons/apple-white.png');
+  content: url("../assets/img/icons/apple-white.png");
   display: inline-block;
   width: 24px;
 }
