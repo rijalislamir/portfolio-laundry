@@ -2,7 +2,7 @@
   <header>
     <nav
       :class="
-        'bg-white p-6 fixed w-full flex items-center justify-center h-16 shadow-md transition-all' +
+        'bg-white p-6 fixed z-10 w-full flex items-center justify-center h-16 shadow-md transition-all' +
         (showNavbar ? '' : ' -translate-y-full')
       "
     >
@@ -35,6 +35,19 @@
         </div>
       </div>
     </nav>
+
+    <div
+      :class="
+        'fixed flex flex-col text-white items-center justify-center bg-slate-800 left-0 top-0 right-0 bottom-0 z-0 transition-all -translate-y-full ' +
+        (showMobileMenu ? 'translate-y-0' : '')
+      "
+    >
+      <ul class="flex flex-col justify-center items-center gap-16">
+        <li class="text-4xl font-bold">Pricing</li>
+        <li class="text-4xl font-bold">Features</li>
+        <li class="text-4xl font-bold">Contact Us</li>
+      </ul>
+    </div>
   </header>
 </template>
 
