@@ -2,14 +2,14 @@
   <header>
     <nav
       :class="
-        'bg-white fixed w-full flex items-center justify-center h-16 shadow-md transition-all' +
+        'bg-white p-6 fixed w-full flex items-center justify-center h-16 shadow-md transition-all' +
         (showNavbar ? '' : ' -translate-y-full')
       "
     >
       <div class="flex justify-between w-full max-w-[1000px]">
-        <h1 class="text-xl font-bold">Logo</h1>
+        <h1 class="text-xl font-bold flex items-center">Logo</h1>
 
-        <div class="flex gap-6">
+        <div class="hidden sm:flex gap-6">
           <ul class="flex gap-6">
             <li>Pricing</li>
             <li>Features</li>
@@ -18,6 +18,20 @@
           <span>|</span>
 
           <button>Contact Us</button>
+        </div>
+
+        <div class="flex sm:hidden text-4xl">
+          <button @click="toggleBurgerMenu">
+            <span
+              :class="
+                `block relative before:w-8 before:bg-black before:h-[3px] before:transition-all before:content-[''] before:absolute before:left-0 before:bottom-2 w-8 h-[3px] transition-all after:w-8 after:bg-black after:h-[3px] after:transition-all after:content-[''] after:absolute after:left-0 after:top-2 ` +
+                (showMobileMenu
+                  ? 'bg-white before:translate-y-[8px] after:-translate-y-[8px] before:rotate-45 after:-rotate-45'
+                  : 'bg-black')
+              "
+            >
+            </span>
+          </button>
         </div>
       </div>
     </nav>
@@ -29,6 +43,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import Button from "./Button.vue";
 
 const showNavbar = ref(true);
+const showMobileMenu = ref(false);
 const lastScrollPosition = ref(window.pageYOffset);
 
 onMounted(() => {
@@ -46,5 +61,10 @@ const onScroll = () => {
 
   showNavbar.value = window.pageYOffset <= lastScrollPosition.value;
   lastScrollPosition.value = window.pageYOffset;
+};
+
+const toggleBurgerMenu = () => {
+  showMobileMenu.value = !showMobileMenu.value;
+  console.log(showMobileMenu.value);
 };
 </script>
