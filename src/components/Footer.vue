@@ -7,49 +7,51 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 </script>
 
 <template>
-  <footer>
-    <div class="footer-container flex flex-col items-center">
-      <h1 class="text-xl font-bold">Logo</h1>
+  <footer
+    class="bg-slate-900 flex text-white items-center justify-center p-8 min-h-[400px]"
+  >
+    <div class="flex flex-col items-center w-full max-w-[1000px]">
+      <h1 class="text-xl font-bold sm:w-full">Logo</h1>
 
-      <hr />
+      <hr class="w-full my-8 border-slate-500" />
 
-      <div class="footer-menu flex flex-col gap-12 w-full">
-        <div class="footer-menu-item">
+      <div class="flex flex-col gap-12 w-full sm:flex-row">
+        <div class="flex flex-col content-start gap-4 basis-0 grow">
           <h3 class="font-bold">About Us</h3>
 
-          <ul>
+          <ul class="flex flex-col gap-2">
             <li><a href="#">Shops</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Promo</a></li>
           </ul>
         </div>
 
-        <div class="footer-menu-item">
+        <div class="flex flex-col content-start gap-4 basis-0 grow">
           <h3 class="font-bold">Pricing</h3>
 
-          <ul>
+          <ul class="flex flex-col gap-2">
             <li><a href="#">Regular</a></li>
             <li><a href="#">Premium</a></li>
           </ul>
         </div>
 
-        <div class="footer-menu-item">
+        <div class="flex flex-col content-start gap-4 basis-0 grow">
           <h3 class="font-bold">Contact Us</h3>
 
-          <ul>
+          <ul class="flex flex-col gap-2">
             <li><a href="#">Location</a></li>
             <li><a href="#">Customer Support</a></li>
           </ul>
         </div>
       </div>
 
-      <hr />
+      <hr class="w-full my-8 border-slate-500" />
 
       <div
-        class="footer-copyright flex flex-col justify-center items-center gap-4"
+        class="flex flex-col justify-center items-center gap-4 sm:w-full sm:flex-row sm:justify-between"
       >
-        <div class="copyright-text">© 2023 <a href="#">Rijal Islami</a></div>
-        <div class="social-media">
+        <div>© 2023 <a href="#">Rijal Islami</a></div>
+        <div class="flex gap-4">
           <a href="#"><img :src="facebookIcon" /></a>
           <a href="#"><img :src="twitterIcon" /></a>
           <a href="#"><img :src="instagramIcon" /></a>
@@ -60,60 +62,3 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
     </div>
   </footer>
 </template>
-
-<style scoped>
-footer {
-  background-color: rgb(16, 24, 32);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  padding: 36px;
-}
-
-hr {
-  /* background-color: red; */
-  border-color: rgba(255, 255, 255, 0.2);
-  height: 0;
-  margin: 2rem 0;
-  width: 100%;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.footer-menu {
-  display: flex;
-}
-
-.footer-menu ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  list-style-type: none;
-}
-
-.footer-menu-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1rem;
-  flex-basis: 0;
-  flex-grow: 1;
-}
-
-.footer-copyright {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social-media {
-  display: flex;
-  gap: 1rem;
-}
-</style>
