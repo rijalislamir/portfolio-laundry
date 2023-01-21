@@ -1,64 +1,28 @@
 <template>
   <header>
-    <nav :class="showNavbar && 'show'">
-      <div class="nav-container">
-        <h1>Logo</h1>
+    <nav
+      :class="
+        'bg-white fixed w-full flex items-center justify-center h-16 shadow-md transition-all -translate-y-full' +
+        (showNavbar && ' translate-y-full')
+      "
+    >
+      <div class="flex justify-between w-full max-w-[1000px]">
+        <h1 class="text-xl font-bold">Logo</h1>
 
-        <div class="right-nav">
-          <ul>
+        <div class="flex gap-6">
+          <ul class="flex gap-6">
             <li>Pricing</li>
             <li>Features</li>
           </ul>
 
           <span>|</span>
 
-          <Button>CONTACT US</Button>
+          <button>Contact Us</button>
         </div>
       </div>
     </nav>
   </header>
 </template>
-
-<style scoped>
-nav {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4rem;
-  position: fixed;
-  width: 100%;
-  transition: 1s;
-  translate: 0 -100px;
-  opacity: 0;
-}
-
-.show {
-  translate: 0;
-  opacity: 1;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.right-nav {
-  display: flex;
-  line-height: 36px;
-  gap: 24px;
-  text-align: center;
-}
-
-ul {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-}
-</style>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
