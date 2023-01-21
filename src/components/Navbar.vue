@@ -2,8 +2,8 @@
   <header>
     <nav
       :class="
-        'bg-white fixed w-full flex items-center justify-center h-16 shadow-md transition-all -translate-y-full' +
-        (showNavbar && ' translate-y-full')
+        'bg-white fixed w-full flex items-center justify-center h-16 shadow-md transition-all' +
+        (showNavbar ? ' -translate-y-full' : '')
       "
     >
       <div class="flex justify-between w-full max-w-[1000px]">
