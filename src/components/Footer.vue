@@ -8,14 +8,14 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 
 <template>
   <footer>
-    <div class="footer-container">
-      <h1>Logo</h1>
+    <div class="footer-container flex flex-col items-center">
+      <h1 class="text-xl font-bold">Logo</h1>
 
       <hr />
 
-      <div class="footer-menu">
+      <div class="footer-menu flex flex-col gap-12 w-full">
         <div class="footer-menu-item">
-          <h3>About Us</h3>
+          <h3 class="font-bold">About Us</h3>
 
           <ul>
             <li><a href="#">Shops</a></li>
@@ -25,7 +25,7 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
         </div>
 
         <div class="footer-menu-item">
-          <h3>Pricing</h3>
+          <h3 class="font-bold">Pricing</h3>
 
           <ul>
             <li><a href="#">Regular</a></li>
@@ -34,7 +34,7 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
         </div>
 
         <div class="footer-menu-item">
-          <h3>Contact Us</h3>
+          <h3 class="font-bold">Contact Us</h3>
 
           <ul>
             <li><a href="#">Location</a></li>
@@ -45,7 +45,9 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 
       <hr />
 
-      <div class="footer-copyright">
+      <div
+        class="footer-copyright flex flex-col justify-center items-center gap-4"
+      >
         <div class="copyright-text">© 2023 <a href="#">Rijal Islami</a></div>
         <div class="social-media">
           <a href="#"><img :src="facebookIcon" /></a>
@@ -66,7 +68,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  min-height: 400px;
   padding: 36px;
 }
 
