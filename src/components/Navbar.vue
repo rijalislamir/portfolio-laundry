@@ -38,7 +38,7 @@
 
     <div
       :class="
-        'fixed flex flex-col text-white items-center justify-center bg-slate-800 left-0 top-0 right-0 bottom-0 z-0 transition-all -translate-y-full ' +
+        'fixed flex flex-col text-white items-center justify-center bg-slate-900 left-0 top-0 right-0 bottom-0 z-0 transition-all -translate-y-full ' +
         (showMobileMenu ? 'translate-y-0' : '')
       "
     >
@@ -53,7 +53,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import Button from "./Button.vue";
 
 const showNavbar = ref(true);
 const showMobileMenu = ref(false);
