@@ -1,8 +1,8 @@
 <template>
   <section class="flex justify-center items-center h-screen">
     <div class="flex flex-col justify-center items-center">
-      <h1 class="text-6xl font-bold text-center">Your Laundry</h1>
-      <p class="my-8 text-center">
+      <h1 class="text-6xl font-bold text-center px-6">Your Laundry</h1>
+      <p class="my-8 text-center px-6">
         Experience your best feeling of smoothness from laundry.
       </p>
 
