@@ -1,13 +1,13 @@
 <template>
   <section class="bg-gray-100 pt-4">
-    <h1 class="text-center text-4xl font-bold">Testimony</h1>
+    <h1 class="text-center text-3xl font-bold px-6">What people say</h1>
 
     <div class="flex justify-center pt-4">
       <div class="relative w-[900px] h-[400px] overflow-hidden">
         <div
           v-for="(person, index) in data"
           v-show="currentSlide === index"
-          class="p-6 bg-gray-200 rounded-3xl text-center absolute left-0 top-0 right-0 mx-6"
+          class="p-6 bg-gray-200 rounded-3xl text-center absolute left-0 top-0 right-0 mx-[25.02px]"
         >
           <div
             class="bg-slate-900 w-24 h-24 rounded-full m-auto flex items-center justify-center"
@@ -15,7 +15,9 @@
             <img :src="userIcon" alt="user-photo" />
           </div>
 
-          <span class="inline-block font-bold p-4">{{ person.name }}</span>
+          <span class="inline-block font-bold p-4">
+            {{ person.name }}
+          </span>
 
           <p class="italic">
             {{ person.text }}
