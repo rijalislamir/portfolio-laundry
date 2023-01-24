@@ -1,21 +1,27 @@
 <template>
-  <section class="bg-gray-100 pt-4">
+  <section class="bg-gray-100 py-4">
     <h1 class="text-center text-3xl font-bold px-6">What people say</h1>
 
-    <div class="flex justify-center pt-4">
-      <div class="relative w-[900px] h-[400px] overflow-hidden">
-        <div
-          v-for="(person, index) in data"
-          v-show="currentSlide === index"
-          class="p-6 bg-gray-200 rounded-3xl text-center absolute left-0 top-0 right-0 mx-[25.02px]"
-        >
+    <Swiper
+      :modules="modules"
+      :slides-per-view="1"
+      :space-between="10"
+      navigation
+      :pagination="{
+        clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 2,
+      }"
+    >
+      <SwiperSlide v-for="person in data">
+        <div class="text-center p-8 m-4 bg-gray-200 rounded-3xl h-full">
           <div
             class="bg-slate-900 w-24 h-24 rounded-full m-auto flex items-center justify-center"
           >
             <img :src="userIcon" alt="user-photo" />
           </div>
 
-          <span class="inline-block font-bold p-4">
+          <span class="font-bold text-lg inline-block p-4">
             {{ person.name }}
           </span>
 
@@ -23,42 +29,23 @@
             {{ person.text }}
           </p>
         </div>
-
-        <div>
-          <button
-            class="absolute bg-black/20 p-2 top-[calc(50%_-_20px)] left-0 text-3xl"
-            @click="prevSlide"
-          >
-            &#8249;
-          </button>
-          <button
-            class="absolute bg-black/20 p-2 top-[calc(50%_-_20px)] right-0 text-3xl"
-            @click="nextSlide"
-          >
-            &#8250;
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex justify-center gap-4 py-6">
-      <button
-        v-for="(_, index) in data"
-        :class="
-          'rounded-full w-4 h-4 ' +
-          (currentSlide === index ? 'bg-black' : 'bg-gray-300')
-        "
-        @click="goToSlide(index)"
-      ></button>
-    </div>
+      </SwiperSlide>
+    </Swiper>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import userIcon from "../assets/img/icons/icons8-user-60.png";
 
-const currentSlide = ref(0);
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+const modules = [Navigation, Pagination, Scrollbar, A11y];
 const data = [
   {
     name: "John Doe",
@@ -77,18 +64,4 @@ const data = [
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque placeat velit commodi eius hic adipisci! Vitae quos suscipit unde asperiores.",
   },
 ];
-
-const nextSlide = () => {
-  currentSlide.value =
-    currentSlide.value === data.length - 1 ? 0 : currentSlide.value + 1;
-};
-
-const prevSlide = () => {
-  currentSlide.value =
-    currentSlide.value === 0 ? data.length - 1 : currentSlide.value - 1;
-};
-
-const goToSlide = (index: number) => {
-  currentSlide.value = index;
-};
 </script>
