@@ -21,8 +21,3 @@ a:hover {
 .swiper-pagination-bullet-active {
   background-color: rgb(15 23 42) !important;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: rgb(15 23 42) !important;
-}
