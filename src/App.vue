@@ -2,12 +2,12 @@
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import Testimony from "./components/Testimony.vue";
-import Footer from "./components/Footer.vue";
+import FooterCopyright from "./components/FooterCopyright.vue";
 </script>
 
 <template>
   <Navbar />
   <Hero />
   <Testimony />
-  <Footer />
+  <FooterCopyright />
 </template>
