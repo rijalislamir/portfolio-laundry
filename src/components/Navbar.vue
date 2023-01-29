@@ -52,7 +52,6 @@
 </template>
 
 <script setup lang="ts">
-import { show } from "dom7";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const showNavbar = ref(true);
