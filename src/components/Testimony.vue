@@ -16,7 +16,7 @@
             class="text-center p-6 mx-8 my-4 max-w-[463px] bg-gray-200 rounded-3xl h-full"
           >
             <div
-              class="bg-blue-main w-24 h-24 rounded-full m-auto flex items-center justify-center"
+              class="bg-gradient-to-b from-blue-main to-blue-600 w-24 h-24 rounded-full m-auto flex items-center justify-center"
             >
               <img :src="userIcon" alt="user-photo" />
             </div>
