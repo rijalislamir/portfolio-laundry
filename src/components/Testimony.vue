@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 py-8">
+  <section class="py-8">
     <h1 class="text-center text-2xl font-bold px-6">
       What <span class="text-blue-main">people</span> say
     </h1>
@@ -13,7 +13,7 @@
       >
         <SwiperSlide v-for="person in data" class="flex justify-center">
           <div
-            class="text-center p-6 mx-8 my-4 max-w-[463px] bg-gray-200 rounded-3xl h-full"
+            class="text-center p-6 mx-8 my-4 max-w-[463px] bg-gray-100 rounded-3xl h-full"
           >
             <div
               class="bg-gradient-to-b from-blue-main to-blue-600 w-24 h-24 rounded-full m-auto flex items-center justify-center"

@@ -1,10 +1,12 @@
 <template>
-  <section class="flex justify-center items-center h-screen">
+  <section
+    class="flex justify-center items-center h-screen bg-[url('/src/assets/img/laundry.jpg')] bg-gray-500 bg-blend-multiply bg-center"
+  >
     <div class="flex flex-col justify-center items-center">
       <h1 class="text-6xl text-blue-main font-bold text-center px-6">
         Your Laundry
       </h1>
-      <p class="my-8 text-center px-6">
+      <p class="my-8 text-center text-white px-6">
         Experience your best feeling of smoothness from
         <span class="font-bold text-blue-main">LAUNDRY</span>.
       </p>

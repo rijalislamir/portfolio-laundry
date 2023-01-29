@@ -1,6 +1,6 @@
 <template>
   <!-- Service -->
-  <section class="p-8">
+  <section class="bg-gray-100 p-8">
     <div class="max-w-5xl mx-auto">
       <h1 class="text-2xl text-center font-bold mb-8">
         Our <span class="text-blue-main">service</span> is

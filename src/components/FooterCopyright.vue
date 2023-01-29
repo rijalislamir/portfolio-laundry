@@ -11,7 +11,7 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
     class="bg-slate-900 flex flex-col gap-8 text-white items-center justify-center min-h-[400px]"
   >
     <div class="relative w-full">
-      <div class="bg-gray-100 absolute top-0 left-0 right-0 lg:h-1/2"></div>
+      <div class="bg-white absolute top-0 left-0 right-0 lg:h-1/2"></div>
 
       <div
         class="bg-gradient-to-b from-blue-main to-blue-600 relative w-full max-w-5xl mx-auto text-center lg:rounded-xl"
