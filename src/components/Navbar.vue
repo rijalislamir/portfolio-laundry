@@ -6,7 +6,7 @@
         (showNavbar || showMobileMenu ? '' : ' -translate-y-full')
       "
     >
-      <div class="flex justify-between w-full max-w-[1000px]">
+      <div class="flex justify-between w-full max-w-5xl">
         <h1 class="text-xl text-blue-main font-bold flex items-center">Logo</h1>
 
         <div class="hidden sm:flex gap-6">

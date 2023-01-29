@@ -1,13 +1,15 @@
 <template>
   <!-- Service -->
   <section class="p-8">
-    <h1 class="text-2xl text-center font-bold mb-8">
-      Our <span class="text-blue-main">service</span> is
-    </h1>
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-2xl text-center font-bold mb-8">
+        Our <span class="text-blue-main">service</span> is
+      </h1>
 
-    <div v-for="service in services" class="flex gap-8 items-center mb-6">
-      <img :src="service.src" class="w-16 h-16" />
-      <p class="text-sm">{{ service.text }}</p>
+      <div v-for="service in services" class="flex gap-8 items-center mb-6">
+        <img :src="service.src" class="w-16 h-16" />
+        <p class="text-sm">{{ service.text }}</p>
+      </div>
     </div>
   </section>
 </template>

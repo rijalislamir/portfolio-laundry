@@ -4,7 +4,7 @@
       What <span class="text-blue-main">people</span> say
     </h1>
 
-    <div class="max-w-[1000px] mx-auto">
+    <div class="max-w-5xl mx-auto">
       <Swiper
         :modules="modules"
         :slides-per-view="screenWidth < 1000 ? 1 : 2"
@@ -45,7 +45,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const screenWidth = ref(0);
+const screenWidth = ref(window.innerWidth);
 const modules = [Pagination, Scrollbar, A11y];
 const data = [
   {
