@@ -7,7 +7,7 @@
       "
     >
       <div class="flex justify-between w-full max-w-[1000px]">
-        <h1 class="text-xl font-bold flex items-center">Logo</h1>
+        <h1 class="text-xl text-blue-main font-bold flex items-center">Logo</h1>
 
         <div class="hidden sm:flex gap-6">
           <ul class="flex gap-6">
