@@ -5,7 +5,8 @@
         Your Laundry
       </h1>
       <p class="my-8 text-center px-6">
-        Experience your best feeling of smoothness from laundry.
+        Experience your best feeling of smoothness from
+        <span class="font-bold text-blue-main">LAUNDRY</span>.
       </p>
 
       <div class="flex flex-col gap-4 sm:flex-row">

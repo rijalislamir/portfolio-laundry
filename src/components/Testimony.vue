@@ -1,6 +1,6 @@
 <template>
-  <section class="bg-gray-100 py-4">
-    <h1 class="text-center text-3xl font-bold px-6">
+  <section class="bg-gray-100 py-8">
+    <h1 class="text-center text-2xl font-bold px-6">
       What <span class="text-blue-main">people</span> say
     </h1>
 
@@ -13,7 +13,7 @@
       >
         <SwiperSlide v-for="person in data" class="flex justify-center">
           <div
-            class="text-center p-8 m-4 max-w-[463px] bg-gray-200 rounded-3xl h-full"
+            class="text-center p-6 mx-8 my-4 max-w-[463px] bg-gray-200 rounded-3xl h-full"
           >
             <div
               class="bg-blue-main w-24 h-24 rounded-full m-auto flex items-center justify-center"
