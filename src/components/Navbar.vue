@@ -24,10 +24,10 @@
           <button @click="toggleBurgerMenu">
             <span
               :class="
-                `block relative before:w-8 before:bg-black before:h-[3px] before:transition-all before:content-[''] before:absolute before:left-0 before:bottom-2 w-8 h-[3px] transition-all after:w-8 after:bg-black after:h-[3px] after:transition-all after:content-[''] after:absolute after:left-0 after:top-2 ` +
+                `block relative before:w-8 before:bg-blue-main before:h-[3px] before:transition-all before:content-[''] before:absolute before:left-0 before:bottom-2 w-8 h-[3px] transition-all after:w-8 after:bg-blue-main after:h-[3px] after:transition-all after:content-[''] after:absolute after:left-0 after:top-2 ` +
                 (showMobileMenu
                   ? 'bg-white before:translate-y-[8px] after:-translate-y-[8px] before:rotate-45 after:-rotate-45'
-                  : 'bg-black')
+                  : 'bg-blue-main')
               "
             >
             </span>
@@ -38,7 +38,7 @@
 
     <div
       :class="
-        'fixed z-40 flex flex-col text-white items-center justify-center bg-slate-900 left-0 top-0 right-0 bottom-0 z-0 transition-all -translate-y-full ' +
+        'bg-blue-main fixed z-40 flex flex-col text-white items-center justify-center bg-slate-900 left-0 top-0 right-0 bottom-0 transition-all -translate-y-full ' +
         (showMobileMenu ? 'translate-y-0' : '')
       "
     >
@@ -52,6 +52,7 @@
 </template>
 
 <script setup lang="ts">
+import { show } from "dom7";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const showNavbar = ref(true);
@@ -77,5 +78,8 @@ const onScroll = () => {
 
 const toggleBurgerMenu = () => {
   showMobileMenu.value = !showMobileMenu.value;
+  document.documentElement.style.overflow = showMobileMenu.value
+    ? "hidden"
+    : "auto";
 };
 </script>

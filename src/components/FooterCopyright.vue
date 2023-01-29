@@ -8,8 +8,35 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 
 <template>
   <footer
-    class="bg-slate-900 flex text-white items-center justify-center p-8 min-h-[400px]"
+    class="bg-slate-900 flex flex-col gap-8 text-white items-center justify-center p-8 pt-0 min-h-[400px]"
   >
+    <div class="relative">
+      <div
+        class="bg-gradient-to-b from-blue-main to-blue-600 w-screen text-center"
+      >
+        <h1 class="text-2xl font-bold px-12 pt-8">
+          Let's try <span class="whitespace-nowrap">the smoothness!</span>
+        </h1>
+
+        <p class="font-thin text-sm px-8">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, at!
+        </p>
+
+        <div class="flex flex-col gap-4 items-center p-8">
+          <button
+            class="bg-white text-blue-main p-4 w-full rounded-lg font-bold"
+          >
+            Play Store
+          </button>
+          <button
+            class="bg-white text-blue-main p-4 w-full rounded-lg font-bold"
+          >
+            App Store
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="flex flex-col items-center w-full max-w-[1000px]">
       <h1 class="text-xl font-bold sm:w-full">Logo</h1>
 

@@ -1,6 +1,8 @@
 <template>
   <section class="bg-gray-100 py-4">
-    <h1 class="text-center text-3xl font-bold px-6">What people say</h1>
+    <h1 class="text-center text-3xl font-bold px-6">
+      What <span class="text-blue-main">people</span> say
+    </h1>
 
     <div class="max-w-[1000px] mx-auto">
       <Swiper
@@ -14,7 +16,7 @@
             class="text-center p-8 m-4 max-w-[463px] bg-gray-200 rounded-3xl h-full"
           >
             <div
-              class="bg-slate-900 w-24 h-24 rounded-full m-auto flex items-center justify-center"
+              class="bg-blue-main w-24 h-24 rounded-full m-auto flex items-center justify-center"
             >
               <img :src="userIcon" alt="user-photo" />
             </div>
@@ -23,7 +25,7 @@
               {{ person.name }}
             </span>
 
-            <p class="italic">
+            <p class="italic text-gray-600">
               {{ person.text }}
             </p>
           </div>

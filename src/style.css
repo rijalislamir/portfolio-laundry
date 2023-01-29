@@ -18,6 +18,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.swiper-pagination {
+  position: static !important;
+}
+
 .swiper-pagination-bullet-active {
-  background-color: rgb(15 23 42) !important;
+  background-color: #00a8e8 !important;
 }
