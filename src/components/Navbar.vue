@@ -9,15 +9,14 @@
       <div class="flex justify-between w-full max-w-5xl">
         <h1 class="text-xl text-blue-main font-bold flex items-center">Logo</h1>
 
-        <div class="hidden sm:flex gap-6">
-          <ul class="flex gap-6">
+        <div class="hidden sm:flex">
+          <ul class="flex gap-12 font-semibold">
+            <li>About</li>
             <li>Pricing</li>
-            <li>Features</li>
+            <li>
+              <button>Contact Us</button>
+            </li>
           </ul>
-
-          <span>|</span>
-
-          <button>Contact Us</button>
         </div>
 
         <div class="flex sm:hidden text-4xl">

@@ -49,7 +49,7 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
 
         <div class="flex flex-col gap-12 w-full sm:flex-row">
           <div class="flex flex-col content-start gap-4 basis-0 grow">
-            <h3 class="font-bold">About Us</h3>
+            <h3 class="font-bold">About</h3>
 
             <ul class="flex flex-col gap-2">
               <li><a href="#">Shops</a></li>
