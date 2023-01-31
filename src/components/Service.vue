@@ -6,9 +6,22 @@
         Our <span class="text-blue-main">service</span> is
       </h1>
 
-      <div v-for="service in services" class="flex gap-8 items-center mb-6">
-        <img :src="service.src" class="w-16 h-16" />
-        <p class="text-sm">{{ service.text }}</p>
+      <div
+        v-for="(service, i) in services"
+        class="flex gap-8 items-start mb-8 relative"
+      >
+        <img :src="service.src" class="w-12 h-12 relative z-10" />
+
+        <div
+          class="-ml-0.5 absolute mt-0.5 top-12 left-6 w-px border-l-4 border-dotted border-gray-300 h-full"
+          v-if="i !== services.length - 1"
+          aria-hidden="true"
+        ></div>
+
+        <div class="flex flex-col gap-4">
+          <h2 class="text-lg font-bold">{{ service.title }}</h2>
+          <p class="font-thin">{{ service.description }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -24,23 +37,33 @@ import truckIcon from "../assets/img/icons/truck.svg";
 const services = [
   {
     src: twentyFourIcon,
-    text: "24 hours service",
+    title: "24 hours service",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores adipisci voluptatem aliquid consequuntur pariatur reiciendis.",
   },
   {
     src: openShopIcon,
-    text: "Put/pick your cloth at any day",
+    title: "Put/pick your cloth at any day",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod hic ut sunt? Unde porro dignissimos aut blanditiis rerum.",
   },
   {
     src: medalQualityIcon,
-    text: "Soft and clean laundry",
+    title: "Soft and clean laundry",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum corporis modi doloremque non nostrum quis beatae itaque sint cum.",
   },
   {
     src: discountIcon,
-    text: "Get a discount for loyal customer",
+    title: "Get a discount for loyal customer",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ex inventore sed, necessitatibus velit deleniti laudantium?",
   },
   {
     src: truckIcon,
-    text: "Put the laundry or pick-up by us",
+    title: "Put the laundry or pick-up by us",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo soluta similique iure autem minus repudiandae quae? Quasi, nihil!",
   },
 ];
 </script>
