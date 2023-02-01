@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import About from "./components/About.vue";
 import Service from "./components/Service.vue";
-import Testimony from "./components/Testimony.vue";
+import Testimonial from "./components/Testimonial.vue";
 import FooterCopyright from "./components/FooterCopyright.vue";
 </script>
 
@@ -12,6 +12,6 @@ import FooterCopyright from "./components/FooterCopyright.vue";
   <Hero />
   <About />
   <Service />
-  <Testimony />
+  <Testimonial />
   <FooterCopyright />
 </template>
