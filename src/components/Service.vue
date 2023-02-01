@@ -26,7 +26,7 @@
               aria-hidden="true"
             ></div>
 
-            <div class="flex flex-col gap-4" v-motion-slide-visible-once-right>
+            <div class="flex flex-col gap-4">
               <h2 class="text-lg font-bold">{{ service.title }}</h2>
               <p class="font-thin">{{ service.description }}</p>
             </div>

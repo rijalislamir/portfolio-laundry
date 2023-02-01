@@ -4,7 +4,7 @@
       What <span class="text-blue-main">people</span> say
     </h1>
 
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-5xl mx-auto hover:cursor-grab">
       <Swiper
         :modules="modules"
         :slides-per-view="screenWidth < 820 ? 1 : 2"
@@ -12,9 +12,6 @@
         :pagination="{ clickable: true }"
       >
         <SwiperSlide v-for="person in data" class="flex justify-center">
-          <!-- <div
-            class="text-center p-6 mx-8 my-4 max-w-[463px] bg-gray-100 rounded-3xl h-full"
-          > -->
           <div class="text-center mx-8 my-4 max-w-[463px]">
             <p
               class="bg-gray-100 p-6 rounded-tl-3xl rounded-br-3xl rounded-tr-xl rounded-bl-xl italic text-gray-600"
