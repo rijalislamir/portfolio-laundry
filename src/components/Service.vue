@@ -6,21 +6,31 @@
         Our <span class="text-blue-main">service</span> is
       </h1>
 
-      <div
-        v-for="(service, i) in services"
-        class="flex gap-8 items-start mb-8 relative"
-      >
-        <img :src="service.src" class="w-12 h-12 relative z-10" />
-
+      <div class="relative lg:flex lg:flex-wrap lg:gap-4 justify-center">
         <div
-          class="-ml-0.5 absolute mt-0.5 top-12 left-6 w-px border-l-4 border-dotted border-gray-300 h-full"
-          v-if="i !== services.length - 1"
-          aria-hidden="true"
-        ></div>
+          v-for="(service, i) in services"
+          class="relative group basis-[49%]"
+        >
+          <div
+            class="hidden group-hover:lg:block absolute -inset-1 bg-gradient-to-r from-yellow-200 via-blue-200 to-green-200 rounded-xl blur"
+          ></div>
 
-        <div class="flex flex-col gap-4" v-motion-slide-visible-once-right>
-          <h2 class="text-lg font-bold">{{ service.title }}</h2>
-          <p class="font-thin">{{ service.description }}</p>
+          <div
+            class="flex gap-8 items-start mb-8 relative h-full lg:flex-col lg:gap-4 lg:min-w-2/5 lg:mb-0 lg:rounded-xl lg:bg-white lg:p-6"
+          >
+            <img :src="service.src" class="w-12 h-12 relative z-10" />
+
+            <div
+              class="-ml-0.5 absolute mt-0.5 top-12 left-6 w-px border-l-4 border-dotted border-gray-300 h-full lg:hidden"
+              v-if="i !== services.length - 1"
+              aria-hidden="true"
+            ></div>
+
+            <div class="flex flex-col gap-4" v-motion-slide-visible-once-right>
+              <h2 class="text-lg font-bold">{{ service.title }}</h2>
+              <p class="font-thin">{{ service.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
