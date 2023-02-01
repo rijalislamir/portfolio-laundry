@@ -24,7 +24,9 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, at!
         </p>
 
-        <div class="flex flex-col gap-4 items-center p-8 max-w-xl mx-auto">
+        <div
+          class="flex flex-col gap-4 items-center p-8 max-w-xl mx-auto lg:flex-row lg:gap-16"
+        >
           <button
             class="bg-white text-blue-main p-4 w-full rounded-lg font-bold flex items-center justify-center gap-2"
           >
