@@ -11,10 +11,12 @@
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row py-8 gap-8">
+      <div
+        class="flex flex-col items-center sm:flex-row sm:justify-center py-8 gap-8"
+      >
         <div
           v-for="pricing in data"
-          class="bg-white text-center rounded-lg shadow-md p-4 basis-0 grow"
+          class="bg-white text-center rounded-lg shadow-md p-4 w-64"
         >
           <h2 class="font-semibold">{{ pricing.name }}</h2>
 
