@@ -2,8 +2,11 @@
   <header>
     <nav
       :class="
-        'bg-white p-6 fixed z-50 w-full flex items-center justify-center h-16 shadow-md transition-all' +
-        (showNavbar || showMobileMenu ? '' : ' -translate-y-full')
+        'bg-white p-6 fixed z-50 w-full flex items-center justify-center h-16 transition-all duration-500' +
+        (showNavbar || showMobileMenu ? '' : ' -translate-y-full') +
+        (lastScrollPosition < 5 && !showMobileMenu
+          ? ' bg-transparent'
+          : ' shadow-md')
       "
     >
       <div class="flex justify-between w-full max-w-5xl">
