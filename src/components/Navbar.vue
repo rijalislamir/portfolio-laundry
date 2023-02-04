@@ -78,6 +78,8 @@ const onScroll = () => {
   if (window.pageYOffset < 0) return;
   if (Math.abs(window.pageYOffset - lastScrollPosition.value) < 5) return;
 
+  if (!showNavbar.value && window.pageYOffset <= lastScrollPosition.value)
+    window.scrollBy({ top: -64, behavior: "smooth" });
   showNavbar.value = window.pageYOffset <= lastScrollPosition.value;
   lastScrollPosition.value = window.pageYOffset;
 };
