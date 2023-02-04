@@ -21,9 +21,8 @@
           <h2 class="font-semibold">{{ pricing.name }}</h2>
 
           <div class="p-4">
-            <span>$</span>
             <span class="text-5xl font-bold">
-              {{ pricing.pricePerKg }}
+              {{ "$" + pricing.pricePerKg }}
             </span>
             <span>/kg</span>
           </div>
@@ -44,7 +43,7 @@
                   />
                 </svg>
 
-                <span> Soft and clean </span>
+                <span>Soft and clean</span>
               </li>
 
               <li class="flex gap-2">
@@ -61,9 +60,7 @@
                   />
                 </svg>
 
-                <span>
-                  {{ pricing.time }}
-                </span>
+                <span>{{ pricing.time }}</span>
               </li>
 
               <li class="flex gap-2">
@@ -80,7 +77,45 @@
                   />
                 </svg>
 
-                <span> Get {{ pricing.coupon }} coupoun(s) </span>
+                <span
+                  >Get {{ pricing.coupon }} coupon{{
+                    pricing.coupon > 1 ? "s" : ""
+                  }}</span
+                >
+              </li>
+
+              <li class="flex gap-2" v-if="pricing.freeBag">
+                <svg
+                  class="w-5 h-5 text-green-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <span>Free bag</span>
+              </li>
+
+              <li class="flex gap-2" v-if="pricing.notification">
+                <svg
+                  class="w-5 h-5 text-green-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <span>Get notification immediately</span>
               </li>
             </ul>
           </div>
@@ -101,12 +136,16 @@ const data = [
     pricePerKg: 1,
     time: "2 - 4 days",
     coupon: 1,
+    freeBag: false,
+    notification: false,
   },
   {
     name: "Premium",
     pricePerKg: 2,
     time: "1 days",
     coupon: 2,
+    freeBag: true,
+    notification: true,
   },
 ];
 </script>

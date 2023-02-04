@@ -13,7 +13,12 @@
         <h1 class="text-xl text-blue-main font-bold flex items-center">Logo</h1>
 
         <div class="hidden sm:flex">
-          <ul class="flex gap-12 font-semibold">
+          <ul
+            :class="
+              'flex gap-12 font-semibold transition-all duration-500' +
+              (lastScrollPosition < 5 && !showMobileMenu ? ' text-white' : '')
+            "
+          >
             <li>About</li>
             <li>Pricing</li>
             <li>
