@@ -103,7 +103,7 @@ const data = [
     coupon: 1,
   },
   {
-    name: "Express",
+    name: "Premium",
     pricePerKg: 2,
     time: "1 days",
     coupon: 2,
