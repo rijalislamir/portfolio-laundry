@@ -5,6 +5,7 @@ import About from "./components/About.vue";
 import Service from "./components/Service.vue";
 import Pricing from "./components/Pricing.vue";
 import Testimonial from "./components/Testimonial.vue";
+import Location from "./components/Location.vue";
 import FooterCopyright from "./components/FooterCopyright.vue";
 </script>
 
@@ -15,5 +16,6 @@ import FooterCopyright from "./components/FooterCopyright.vue";
   <Service />
   <Pricing />
   <Testimonial />
+  <Location />
   <FooterCopyright />
 </template>
