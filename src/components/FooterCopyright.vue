@@ -73,7 +73,7 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
             <h3 class="font-bold">Contact Us</h3>
 
             <ul class="flex flex-col gap-2">
-              <li><a href="#">Location</a></li>
+              <li><a href="#location">Location</a></li>
               <li><a href="#">Customer Support</a></li>
             </ul>
           </div>
