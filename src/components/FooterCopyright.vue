@@ -54,8 +54,8 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
             <h3 class="font-bold">About</h3>
 
             <ul class="flex flex-col gap-2">
-              <li><a href="#">Shops</a></li>
-              <li><a href="#">Services</a></li>
+              <li><a href="#about">Shop</a></li>
+              <li><a href="#service">Service</a></li>
               <li><a href="#">Promo</a></li>
             </ul>
           </div>
@@ -64,8 +64,8 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
             <h3 class="font-bold">Pricing</h3>
 
             <ul class="flex flex-col gap-2">
-              <li><a href="#">Regular</a></li>
-              <li><a href="#">Premium</a></li>
+              <li><a href="#regular-pricing">Regular</a></li>
+              <li><a href="#premium-pricing">Premium</a></li>
             </ul>
           </div>
 

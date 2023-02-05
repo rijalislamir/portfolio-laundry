@@ -1,4 +1,5 @@
 <template>
+  <!-- Testimonial -->
   <section class="py-8">
     <h1 class="text-center text-2xl font-bold px-6">
       What <span class="text-blue-main">people</span> say

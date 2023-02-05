@@ -1,5 +1,6 @@
 <template>
-  <section class="p-8">
+  <!-- About -->
+  <section class="p-8" id="about">
     <div class="max-w-5xl mx-auto">
       <h1 class="text-2xl font-bold">
         About

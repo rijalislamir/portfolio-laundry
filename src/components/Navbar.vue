@@ -19,11 +19,9 @@
               (lastScrollPosition < 5 && !showMobileMenu ? ' text-white' : '')
             "
           >
-            <li>About</li>
-            <li>Pricing</li>
-            <li>
-              <button>Contact Us</button>
-            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li>Contact Us</li>
           </ul>
         </div>
 

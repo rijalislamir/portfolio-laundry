@@ -1,4 +1,5 @@
 <template>
+  <!-- Hero -->
   <section
     class="flex justify-center items-center h-screen bg-[url('/src/assets/img/laundry.jpg')] bg-gray-500 bg-blend-multiply bg-center"
   >

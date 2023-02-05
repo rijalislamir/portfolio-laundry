@@ -1,6 +1,6 @@
 <template>
   <!-- Pricing -->
-  <section class="bg-gray-200">
+  <section class="bg-gray-200" id="pricing">
     <div class="max-w-5xl mx-auto px-8">
       <div class="text-center pt-8">
         <h1 class="text-2xl font-bold">
@@ -16,6 +16,7 @@
       >
         <div
           v-for="pricing in data"
+          :id="pricing.id"
           class="bg-white text-center rounded-lg shadow-md p-4 w-64"
         >
           <h2 class="font-semibold">{{ pricing.name }}</h2>
@@ -132,6 +133,7 @@
 <script setup lang="ts">
 const data = [
   {
+    id: "regular-pricing",
     name: "Regular",
     pricePerKg: 1,
     time: "2 - 4 days",
@@ -140,6 +142,7 @@ const data = [
     notification: false,
   },
   {
+    id: "premium-pricing",
     name: "Premium",
     pricePerKg: 2,
     time: "1 days",
