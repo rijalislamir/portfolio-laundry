@@ -5,11 +5,12 @@
       What <span class="text-blue-main">people</span> say
     </h1>
 
-    <div class="max-w-5xl mx-auto hover:cursor-grab">
+    <div class="max-w-5xl mx-auto">
       <Swiper
         :modules="modules"
         :slides-per-view="screenWidth < 820 ? 1 : 2"
         :space-between="10"
+        :grab-cursor="true"
         :pagination="{ clickable: true }"
       >
         <SwiperSlide v-for="person in data" class="flex justify-center">
