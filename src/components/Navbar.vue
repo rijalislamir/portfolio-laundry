@@ -19,9 +19,9 @@
               (lastScrollPosition < 5 && !showMobileMenu ? ' text-white' : '')
             "
           >
-            <li><a href="#about">About</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li>Contact Us</li>
+            <li @click="clickMenu"><a href="#about">About</a></li>
+            <li @click="clickMenu"><a href="#pricing">Pricing</a></li>
+            <li @click="clickMenu"><a href="#contact-us">Contact Us</a></li>
           </ul>
         </div>
 
@@ -48,9 +48,15 @@
       "
     >
       <ul class="flex flex-col justify-center items-center gap-16">
-        <li class="text-4xl font-bold">Pricing</li>
-        <li class="text-4xl font-bold">Features</li>
-        <li class="text-4xl font-bold">Contact Us</li>
+        <li class="text-4xl font-bold" @click="clickMenu">
+          <a href="#about">About</a>
+        </li>
+        <li class="text-4xl font-bold" @click="clickMenu">
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li class="text-4xl font-bold" @click="clickMenu">
+          <a href="#contact-us">Contact Us</a>
+        </li>
       </ul>
     </div>
   </header>
@@ -61,15 +67,18 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const showNavbar = ref(true);
 const showMobileMenu = ref(false);
+const isClickMenu = ref(false);
 const lastScrollPosition = ref(window.pageYOffset);
 
 onMounted(() => {
   lastScrollPosition.value = window.pageYOffset;
   window.addEventListener("scroll", onScroll);
+  window.addEventListener("resize", onResizeWidthWindow);
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", onScroll);
+  window.removeEventListener("resize", onResizeWidthWindow);
 });
 
 const onScroll = () => {
@@ -78,6 +87,21 @@ const onScroll = () => {
 
   showNavbar.value = window.pageYOffset <= lastScrollPosition.value;
   lastScrollPosition.value = window.pageYOffset;
+
+  if (isClickMenu.value) {
+    showMobileMenu.value = false;
+    document.documentElement.style.overflow = showMobileMenu.value
+      ? "hidden"
+      : "auto";
+    showNavbar.value = false;
+    isClickMenu.value = false;
+  }
+};
+
+const onResizeWidthWindow = () => {
+  if (window.innerWidth >= 640 && showMobileMenu.value) {
+    toggleBurgerMenu();
+  }
 };
 
 const toggleBurgerMenu = () => {
@@ -85,5 +109,9 @@ const toggleBurgerMenu = () => {
   document.documentElement.style.overflow = showMobileMenu.value
     ? "hidden"
     : "auto";
+};
+
+const clickMenu = () => {
+  isClickMenu.value = true;
 };
 </script>
