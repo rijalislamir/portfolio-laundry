@@ -64,10 +64,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
+import { menuStore } from "../stores/menu";
 
 const showNavbar = ref(true);
 const showMobileMenu = ref(false);
-const isClickMenu = ref(false);
 const lastScrollPosition = ref(window.pageYOffset);
 
 onMounted(() => {
@@ -88,13 +88,13 @@ const onScroll = () => {
   showNavbar.value = window.pageYOffset <= lastScrollPosition.value;
   lastScrollPosition.value = window.pageYOffset;
 
-  if (isClickMenu.value) {
+  if (menuStore.value.isClickedMenu) {
     showMobileMenu.value = false;
     document.documentElement.style.overflow = showMobileMenu.value
       ? "hidden"
       : "auto";
     showNavbar.value = false;
-    isClickMenu.value = false;
+    menuStore.value.setIsClickedMenu(false);
   }
 };
 
@@ -112,6 +112,6 @@ const toggleBurgerMenu = () => {
 };
 
 const clickMenu = () => {
-  isClickMenu.value = true;
+  menuStore.value.setIsClickedMenu(true);
 };
 </script>

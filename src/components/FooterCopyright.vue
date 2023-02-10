@@ -4,6 +4,11 @@ import twitterIcon from "../assets/img/icons/twitter-white.svg";
 import instagramIcon from "../assets/img/icons/instagram-white.svg";
 import whatsappIcon from "../assets/img/icons/whatsapp-white.svg";
 import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
+import { menuStore } from "../stores/menu";
+
+const clickMenu = () => {
+  menuStore.value.setIsClickedMenu(true);
+};
 </script>
 
 <template>
@@ -54,9 +59,9 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
             <h3 class="font-bold">About</h3>
 
             <ul class="flex flex-col gap-2">
-              <li><a href="#about">Shop</a></li>
-              <li><a href="#service">Service</a></li>
-              <li><a href="#">Promo</a></li>
+              <li @click="clickMenu"><a href="#about">Shop</a></li>
+              <li @click="clickMenu"><a href="#service">Service</a></li>
+              <li @click="clickMenu"><a href="#">Promo</a></li>
             </ul>
           </div>
 
@@ -64,8 +69,8 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
             <h3 class="font-bold">Pricing</h3>
 
             <ul class="flex flex-col gap-2">
-              <li><a href="#regular-pricing">Regular</a></li>
-              <li><a href="#premium-pricing">Premium</a></li>
+              <li @click="clickMenu"><a href="#regular-pricing">Regular</a></li>
+              <li @click="clickMenu"><a href="#premium-pricing">Premium</a></li>
             </ul>
           </div>
 
@@ -73,8 +78,10 @@ import linkedinIcon from "../assets/img/icons/linkedin-white.svg";
             <h3 class="font-bold">Contact Us</h3>
 
             <ul class="flex flex-col gap-2">
-              <li><a href="#location">Location</a></li>
-              <li><a href="#contact-us">Customer Support</a></li>
+              <li @click="clickMenu"><a href="#location">Location</a></li>
+              <li @click="clickMenu">
+                <a href="#contact-us">Customer Support</a>
+              </li>
             </ul>
           </div>
         </div>
