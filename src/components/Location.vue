@@ -1,4 +1,5 @@
 <template>
+  <!-- Location -->
   <section class="bg-gray-100 py-8" id="location">
     <h1 class="text-2xl text-center font-bold mb-8">
       You can <span class="text-blue-main">find</span> us on

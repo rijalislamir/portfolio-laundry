@@ -12,6 +12,7 @@ const clickMenu = () => {
 </script>
 
 <template>
+  <!-- Footer -->
   <footer
     class="bg-slate-900 flex flex-col gap-8 text-white items-center justify-center min-h-[400px]"
   >
