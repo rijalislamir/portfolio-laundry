@@ -1,7 +1,7 @@
 <template>
   <!-- Hero -->
   <section
-    class="flex justify-center items-center h-screen bg-[url('/src/assets/img/laundry.jpg')] bg-gray-500 bg-blend-multiply bg-center"
+    class="flex justify-center items-center h-screen bg-[url('/src/assets/img/laundry.jpg')] bg-no-repeat bg-cover bg-gray-500 bg-blend-multiply bg-center"
   >
     <div class="flex flex-col justify-center items-center">
       <h1 class="text-6xl text-blue-main font-bold text-center px-6">

@@ -62,7 +62,6 @@ const clickMenu = () => {
             <ul class="flex flex-col gap-2">
               <li @click="clickMenu"><a href="#about">Shop</a></li>
               <li @click="clickMenu"><a href="#service">Service</a></li>
-              <li @click="clickMenu"><a href="#">Promo</a></li>
             </ul>
           </div>
 
