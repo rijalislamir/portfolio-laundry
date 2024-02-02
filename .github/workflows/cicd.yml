@@ -10,6 +10,9 @@ jobs:
   build:
     runs-on: self-hosted
 
+    env:
+      VITE_GOOGLE_MAPS_API_KEY: AIzaSyAzl4VUS8OJGRTWotDkn8_4jLS6wv5AD-A
+
     steps:
       - name: Checkout the commit
         uses: actions/checkout@v2

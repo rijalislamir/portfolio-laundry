@@ -97,7 +97,9 @@ const clickMenu = () => {
             <a href="#"><img :src="twitterIcon" /></a>
             <a href="#"><img :src="instagramIcon" /></a>
             <a href="#"><img :src="whatsappIcon" /></a>
-            <a href="#"><img :src="linkedinIcon" /></a>
+            <a href="https://linkedin.com/in/rijalislami"
+              ><img :src="linkedinIcon"
+            /></a>
           </div>
         </div>
       </div>
