@@ -4,7 +4,6 @@
     <nav
       :class="
         'bg-white p-6 fixed z-50 w-full flex items-center justify-center h-16 transition-all duration-500' +
-        (showNavbar || showMobileMenu ? '' : ' -translate-y-full') +
         (lastScrollPosition < 5 && !showMobileMenu
           ? ' bg-transparent'
           : ' shadow-md')
@@ -44,7 +43,7 @@
 
     <div
       :class="
-        'bg-blue-main fixed z-40 flex flex-col text-white items-center justify-center bg-slate-900 left-0 top-0 right-0 bottom-0 transition-all -translate-y-full ' +
+        'fixed z-40 flex flex-col text-white items-center justify-center bg-slate-900 left-0 top-0 right-0 bottom-0 transition-all -translate-y-full ' +
         (showMobileMenu ? 'translate-y-0' : '')
       "
     >
@@ -67,7 +66,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { menuStore } from "../stores/menu";
 
-const showNavbar = ref(true);
 const showMobileMenu = ref(false);
 const lastScrollPosition = ref(window.pageYOffset);
 
@@ -86,7 +84,6 @@ const onScroll = () => {
   if (window.pageYOffset < 0) return;
   if (Math.abs(window.pageYOffset - lastScrollPosition.value) < 5) return;
 
-  showNavbar.value = window.pageYOffset <= lastScrollPosition.value;
   lastScrollPosition.value = window.pageYOffset;
 
   if (menuStore.value.isClickedMenu) {
@@ -94,7 +91,6 @@ const onScroll = () => {
     document.documentElement.style.overflow = showMobileMenu.value
       ? "hidden"
       : "auto";
-    showNavbar.value = false;
     menuStore.value.setIsClickedMenu(false);
   }
 };
