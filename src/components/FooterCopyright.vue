@@ -34,13 +34,13 @@ const clickMenu = () => {
           class="flex flex-col gap-4 items-center p-8 max-w-xl mx-auto lg:flex-row lg:gap-16"
         >
           <button
-            class="bg-white text-blue-main p-4 w-full rounded-lg font-bold flex items-center justify-center gap-2"
+            class="bg-white text-blue-main p-4 w-full rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-100"
           >
             <span class="google-play-icon w-6"></span>
             Play Store
           </button>
           <button
-            class="bg-white text-blue-main p-4 w-full rounded-lg font-bold flex items-center justify-center gap-2"
+            class="bg-white text-blue-main p-4 w-full rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-100"
           >
             <span class="apple-icon w-6"></span>
             App Store
@@ -93,13 +93,21 @@ const clickMenu = () => {
         >
           <div>© 2023 <a href="#">Rijal Islami</a></div>
           <div class="flex gap-4">
-            <a href="#"><img :src="facebookIcon" /></a>
-            <a href="#"><img :src="twitterIcon" /></a>
-            <a href="#"><img :src="instagramIcon" /></a>
-            <a href="#"><img :src="whatsappIcon" /></a>
-            <a href="https://linkedin.com/in/rijalislami"
-              ><img :src="linkedinIcon"
-            /></a>
+            <a href="#">
+              <img :src="facebookIcon" class="hover:scale-125 duration-100" />
+            </a>
+            <a href="#">
+              <img :src="twitterIcon" class="hover:scale-125 duration-100" />
+            </a>
+            <a href="#">
+              <img :src="instagramIcon" class="hover:scale-125 duration-100" />
+            </a>
+            <a href="#">
+              <img :src="whatsappIcon" class="hover:scale-125 duration-100" />
+            </a>
+            <a href="https://linkedin.com/in/rijalislami">
+              <img :src="linkedinIcon" class="hover:scale-125 duration-100" />
+            </a>
           </div>
         </div>
       </div>

@@ -35,7 +35,19 @@
               />
             </svg>
 
-            <p>(316) 555-0116</p>
+            <div class="cursor-pointer flex items-center">
+              <p
+                ref="phoneRef"
+                @click.self="copyToClipboard(phone)"
+                class="hover:underline"
+              >
+                {{ phone }}
+              </p>
+
+              <span v-if="show === 'phone'" class="text-xs text-blue-main px-2">
+                Copied!
+              </span>
+            </div>
           </div>
 
           <div class="flex gap-4">
@@ -53,7 +65,20 @@
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            <p>support@example.com</p>
+
+            <div class="cursor-pointer flex items-center">
+              <p
+                ref="emailRef"
+                @click.self="copyToClipboard(email)"
+                class="hover:underline"
+              >
+                {{ email }}
+              </p>
+
+              <span v-if="show === 'email'" class="text-xs text-blue-main px-2">
+                Copied!
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +109,7 @@
         </div>
 
         <button
-          class="bg-blue-main text-white px-6 py-3 mt-6 rounded-md w-full"
+          class="bg-blue-main text-white px-6 py-3 mt-6 rounded-md w-full hover:bg-blue-600"
         >
           Send message
         </button>
@@ -92,3 +117,32 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+
+const phone = "(316) 555-0116";
+const email = "support@example.com";
+const phoneRef = ref(null);
+const emailRef = ref(null);
+const show = ref("");
+
+const copyToClipboard = async (text: string) => {
+  await navigator.clipboard.writeText(text);
+  if (text === phone) show.value = "phone";
+  else if (text === email) show.value = "email";
+};
+
+onMounted(() => {
+  window.addEventListener("click", onClick);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("click", onClick);
+});
+
+const onClick = (e: any) => {
+  if (e.srcElement !== phoneRef.value && e.srcElement !== emailRef.value)
+    show.value = "";
+};
+</script>
