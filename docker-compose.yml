@@ -17,4 +17,4 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --webroot -w /var/www/certbot --force-renewal --email rijalislamir@gmail.com -d rijalislamir.my.id -d www.rijalislamir.my.id --agree-tos
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email rijalislamir@gmail.com -d rijalislami.my.id -d www.rijalislami.my.id --agree-tos
