@@ -2,10 +2,13 @@ version: "3"
 
 services:
   webserver:
-    image: .
+    build:
+      context: .
     ports:
       - 80:80
       - 443:443
-    restart: always
+    environment:
+      - VITE_GOOGLE_MAPS_API_KEY=AIzaSyAzl4VUS8OJGRTWotDkn8_4jLS6wv5AD-A
+    restart: unless-stopped
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf/:ro
