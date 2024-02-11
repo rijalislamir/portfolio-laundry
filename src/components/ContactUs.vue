@@ -35,18 +35,14 @@
               />
             </svg>
 
-            <div class="cursor-pointer flex items-center">
+            <div class="flex items-center">
               <p
                 ref="phoneRef"
                 @click.self="copyToClipboard(phone)"
-                class="hover:underline"
+                class="cursor-pointer hover:underline"
               >
                 {{ phone }}
               </p>
-
-              <span v-if="show === 'phone'" class="text-xs text-blue-main px-2">
-                Copied!
-              </span>
             </div>
           </div>
 
@@ -66,18 +62,14 @@
               />
             </svg>
 
-            <div class="cursor-pointer flex items-center">
+            <div class="flex items-center">
               <p
                 ref="emailRef"
                 @click.self="copyToClipboard(email)"
-                class="hover:underline"
+                class="cursor-pointer hover:underline"
               >
                 {{ email }}
               </p>
-
-              <span v-if="show === 'email'" class="text-xs text-blue-main px-2">
-                Copied!
-              </span>
             </div>
           </div>
         </div>
@@ -129,20 +121,6 @@ const show = ref("");
 
 const copyToClipboard = async (text: string) => {
   await navigator.clipboard.writeText(text);
-  if (text === phone) show.value = "phone";
-  else if (text === email) show.value = "email";
-};
-
-onMounted(() => {
-  window.addEventListener("click", onClick);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("click", onClick);
-});
-
-const onClick = (e: any) => {
-  if (e.srcElement !== phoneRef.value && e.srcElement !== emailRef.value)
-    show.value = "";
+  alert(`${text} is copied!`);
 };
 </script>
